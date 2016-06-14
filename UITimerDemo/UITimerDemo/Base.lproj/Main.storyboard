@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UITimerDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gN8-82-PPq" customClass="UITimerLabel" customModule="UITimerDemo" customModuleProvider="target">
+                                <rect key="frame" x="251" y="91" width="98" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="98" id="Y0Q-b9-XIL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zva-dd-SwA">
+                                <rect key="frame" x="283" y="141" width="34" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="0LX-ed-MIc"/>
+                                </constraints>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="start" destination="BYZ-38-t0r" eventType="touchUpInside" id="WFD-vt-Vvw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UrU-we-iO2">
+                                <rect key="frame" x="284" y="179" width="32" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="g7O-3E-WYn"/>
+                                </constraints>
+                                <state key="normal" title="Stop"/>
+                                <connections>
+                                    <action selector="stop" destination="BYZ-38-t0r" eventType="touchUpInside" id="ban-p1-KNR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P6E-qX-bFa">
+                                <rect key="frame" x="275" y="217" width="50" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="RoD-yC-bdI"/>
+                                </constraints>
+                                <state key="normal" title="Restart"/>
+                                <connections>
+                                    <action selector="restart" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lwo-Gk-71k"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zva-dd-SwA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Cty-LQ-EHF"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="P6E-qX-bFa" secondAttribute="bottom" constant="353" id="E9V-GB-nB9"/>
+                            <constraint firstItem="P6E-qX-bFa" firstAttribute="top" secondItem="UrU-we-iO2" secondAttribute="bottom" constant="8" symbolic="YES" id="GAo-Qg-giw"/>
+                            <constraint firstItem="UrU-we-iO2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ld7-UE-C88"/>
+                            <constraint firstItem="gN8-82-PPq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="71" id="fhh-4F-fiK"/>
+                            <constraint firstItem="gN8-82-PPq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="h9h-CX-En7"/>
+                            <constraint firstItem="P6E-qX-bFa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iWL-je-QnR"/>
+                            <constraint firstItem="zva-dd-SwA" firstAttribute="top" secondItem="gN8-82-PPq" secondAttribute="bottom" constant="8" symbolic="YES" id="irn-zS-IB5"/>
+                            <constraint firstItem="UrU-we-iO2" firstAttribute="top" secondItem="zva-dd-SwA" secondAttribute="bottom" constant="8" symbolic="YES" id="wiC-ge-vR3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="timerView" destination="gN8-82-PPq" id="Gpm-7J-CrG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="429"/>
+        </scene>
+    </scenes>
+</document>
