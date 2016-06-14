@@ -1,6 +1,5 @@
 //
 //  UITimerView.swift
-//  KITime BT
 //
 //  Created by Drew Dunne on 6/14/16.
 //  Copyright © 2016 Drew Dunne. All rights reserved.
