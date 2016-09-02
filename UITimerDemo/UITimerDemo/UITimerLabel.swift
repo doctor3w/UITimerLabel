@@ -26,6 +26,12 @@ class UITimerLabel: UILabel {
     private func common() {
         NSLog("Initing")
         self.text = "00:00"
+        self.font = UIFont.monospacedDigitSystemFontOfSize(16, weight: 0.25)
+    }
+    
+    // Sets the font size, must be valid UIFont size and weight between 0 and 1
+    func setFontSizeAndWeight(size: CGFloat, weight: CGFloat) {
+        self.font = UIFont.monospacedDigitSystemFontOfSize(size, weight: weight)
     }
     
     // Sets the date which the timer counts down to (or up to)

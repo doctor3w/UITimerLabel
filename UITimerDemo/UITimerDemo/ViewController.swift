@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var timerView: UITimerLabel!
-    var duration: Double = 300
+    var duration: Double = 3
     var elapsedTime: NSTimeInterval = 0
     var startTime: NSTimeInterval = -1
 
@@ -22,7 +22,8 @@ class ViewController: UIViewController {
     
     @IBAction func start() {
         startTime = NSDate.timeIntervalSinceReferenceDate()
-        timerView.setDate(NSDate(timeIntervalSinceNow: duration-elapsedTime))
+        let delay = NSDate.timeIntervalSinceReferenceDate() - startTime
+        timerView.setDate(NSDate(timeIntervalSinceNow: duration-elapsedTime-delay))
         timerView.start()
     }
     
